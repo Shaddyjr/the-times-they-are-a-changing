@@ -55,7 +55,7 @@ function compile(){
 
 
 	//benefit pargraph one
-	var benefitParagraph1 = "August 6th," + fullName + " was named the top benefactor of the All Star Code 2016 Benefit." + lastName + "had donated a grand total of over" + netWorth ".";
+	var benefitParagraph1 = "August 6th," + fullName + " was named the top benefactor of the All Star Code 2016 Benefit." + lastName + "had donated a grand total of over" + netWorth + ".";
 	benefitParagraph1 += "Hosted at Christina Lewis Halpern’s summer home in the East Hamptons," + lastName + "is well known for their participation in various movements, including" + movement1 + ",and" + movement2 + ".";
 	benefitParagraph1 += "They have shown unwavering support, and have been a huge proponent of All Star Code since the beginning.";
 
@@ -73,4 +73,5 @@ function compile(){
 
 	// DONT PUT ANYTHING HERE!
 	var hobbiesSubheading = '';
+	$("#uniqueFiller").remove();
 }
