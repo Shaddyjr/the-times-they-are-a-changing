@@ -3,12 +3,21 @@ function compile(){
 	//Personalization
 
 	// name of person
-	var firstName = $("#firstName").val();
+	if ($("#firstName").val()!=""){
+		var firstName = $("#firstName").val();
+	}else{
+		var firstName = "Bob";
+	};
+	
 	var lastName = $("").val();
 	var fullName = firstName + " " + lastName;
 
 	//pic of person
 	var benefitImageURL = $("benefitImageURL").val();
+
+	//Look into
+	// https://api.imgur.com/endpoints/image
+
 
 	// decription for image
 	var benefitPhotoDescription = fullName + "named best photographer of the year.";
@@ -16,39 +25,39 @@ function compile(){
 	// Paragraph 1 Info
 
 	//net worth of person
-	var netWorth = "$10,000,000";
+	var netWorth = $("netWorth").val();
 
 	//movements/causes they support
-	var movement1 = "Music education";
-	var movement2 = "Cultural education";
+	var movement1 = $("movement1").val();
+	var movement2 = $("movement2").val();
 
 	// Paragraph 2 Info
 
 	//activities
-	var activity1 = "attending the theater";
-	var activity2 = "hiking in mountains";
-	var activity3 = "eating out at fancy restaurants";
+	var activity1 = $("activity1").val();
+	var activity2 = $("activity2").val();
+	var activity3 = $("activity3").val();
 
 	//favorite food & drink
-	var food = "";
-	var drink = "";
+	var food = $("food").val();
+	var drink = $("drink").val();
 
 	//area person lives in
-	var area = "Upper West Side in New York City";
-	var areaReason = "";
+	var area = $("area").val();
+	var areaReason = $("areaReason").val();
 
 	// interesting fact
-	var interestingFact = "";
+	var interestingFact = $("interestingFact").val();
 
 	//Paragraph 3 Info
 
 	//what person finds inpsiration from & reason for that
-	var inspirationThing = "";
-	var inspirationReason = "";
+	var inspirationThing = $("inspirationThing").val();
+	var inspirationReason = $("inspirationReason").val();
 
 	// what person likes the most about all star Code
-	var favoriteThing = "";
-	var favoriteThingReason = "";
+	var favoriteThing = $("favoriteThing").val();
+	var favoriteThingReason = $("favoriteThingReason").val();
 
 	// heading for benefitPhotoDescription
 	var benefitHeading = fullName + "Wows at All Star Code Benefit";
@@ -70,8 +79,10 @@ function compile(){
 	benefitParagraph3 += "One of" + lastName + "'s'" + "favorite things about All Star Code is that" + favoriteThing + ".";
 	benefitParagraph3 += "They find this so great because" + favoriteThingReason + ".";
 
+	$("#benefitParagraph1").text(benefitParagraph1);
+	$("#benefitParagraph2").text(benefitParagraph2);
+	$("#benefitParagraph3").text(benefitParagraph3);
 
-	// DONT PUT ANYTHING HERE!
-	var hobbiesSubheading = '';
+
 	$("#uniqueFiller").remove();
 }
